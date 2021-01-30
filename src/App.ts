@@ -4,10 +4,12 @@
 
 import 'src/App.css';
 
+const name: string = 'Lester Long';
+
 const render = () => {
   return (
       '<div class="wrap">' +
-            '<div class="title">Hello Lester 夕宿君兮</div>' +
+            `<div class="title">Hello ${name} 夕宿君兮</div>` +
             '<div class="name">npm project</div>' +
       '</div>'
   )

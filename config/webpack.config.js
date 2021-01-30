@@ -12,7 +12,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, '../src/index.js'),
+        main: path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -40,6 +40,7 @@ module.exports = {
         ignored: /node_modules/
     },
     resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js'],
         alias: {
             '@': path.resolve(__dirname, '../src'),
             'src': path.resolve(__dirname, '../src'),
@@ -55,6 +56,10 @@ module.exports = {
         rules: [{
             test: /\.(js|jsx)$/,
             loader: 'babel-loader',
+            exclude: '/node_modules/',
+        }, {
+            test: /\.(ts|sx)$/,
+            loader: 'ts-loader',
             exclude: '/node_modules/',
         }, {
             test: /\.css$/,
