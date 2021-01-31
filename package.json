@@ -6,8 +6,9 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --config ./config/webpack.config.js",
-    "build": "webpack --mode production --config ./config/webpack.config.js",
+    "dev": "webpack-dev-server --mode development --config ./config/webpack.config.js",
+    "start": "cross-env IP=true node scripts/start.js",
+    "build": "node scripts/build.js",
     "release": "cd lib & npm publish"
   },
   "keywords": [
@@ -15,6 +16,12 @@
   ],
   "author": "lester",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie > 8",
+    "not dead"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
@@ -28,6 +35,7 @@
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "3.2.0",
     "del": "^6.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
