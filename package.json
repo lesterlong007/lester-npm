@@ -1,6 +1,6 @@
 {
   "name": "lester-tools",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "lester's npm project",
   "main": "lib/index.js",
   "types": "index.d.ts",
