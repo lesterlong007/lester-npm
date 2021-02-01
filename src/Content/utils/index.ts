@@ -16,9 +16,9 @@ export const Toast = {
     toast.style.top = "50%";
     toast.style.transform = "translate(-50%, -50%)";
     toast.style.backgroundColor = "rgba(58, 58, 58, 0.9)";
-    toast.style.padding = "5px 10px";
+    toast.style.padding = "8px 15px";
     toast.style.borderRadius = "5px";
-    toast.style.fontSize = "14px";
+    toast.style.fontSize = "12px";
     toast.style.color = "#ffffff";
     toast.style.zIndex = "99999";
     document.body.appendChild(toast);
