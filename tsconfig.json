@@ -10,8 +10,8 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "esModuleInterop": true,
-        "noUnusedParameters": true,
-        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
         "declaration": true,
         "baseUrl": "./",
         "paths": {

@@ -3,8 +3,18 @@
  */
 
 import 'src/App.css';
+import  { copy } from "src/Content";
 
 const name: string = 'Lester Long';
+
+window.onload = function () {
+  const ele = document.querySelector('.title');
+  if (ele) {
+    ele.addEventListener('click', function () {
+      copy('我的名字')
+    })
+  }
+};
 
 const render = () => {
   return (
