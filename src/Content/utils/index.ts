@@ -8,24 +8,25 @@ import qs from "qs";
  * 轻提示
  */
 export const Toast = {
-  info(text: string, duration = 2) {
-    const toast = document.createElement('div');
+  info(text: string, duration = 2, parentElement?: HTMLElement) {
+    const target = parentElement || document.body;
+    const toast = document.createElement("div");
     toast.innerText = text;
-    toast.style.position = "fixed";
+    toast.style.position = parentElement ? "absolute": "fixed";
     toast.style.left = "50%";
     toast.style.top = "50%";
     toast.style.maxWidth = "150px";
     toast.style.lineHeight = "20px";
     toast.style.transform = "translate(-50%, -50%)";
-    toast.style.backgroundColor = "rgba(58, 58, 58, 0.9)";
+    toast.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     toast.style.padding = "8px 15px";
     toast.style.borderRadius = "5px";
     toast.style.fontSize = "12px";
     toast.style.color = "#ffffff";
     toast.style.zIndex = "99999";
-    document.body.appendChild(toast);
+    target.appendChild(toast);
     setTimeout(() => {
-      document.body.removeChild(toast);
+      target.removeChild(toast);
     }, duration * 1000)
   },
   success(text: string, duration: number = 2) {
